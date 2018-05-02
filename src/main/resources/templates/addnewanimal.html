@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+    <head>
+        <title>Dodaj nowe zwierze</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+         <form th:action="@{/}" th:object="${animal}" method="post">
+            Nazwa zwierzecia<br>
+            <input type="text" class="form-control" name="animalname" th:field="*{name}"><br>
+            Wiek<br>
+            <input type="text" class="form-control" name="animalage" th:field="*{age}"><br>
+            Opis<br>
+            <input type="text" class="form-control" name="animaldescription" th:field="*{description}"><br>
+            Gatunek<br>
+            <input type="text" class="form-control" name="animalspecies" th:field="*{species}"><br>
+            imgPath<br>
+            <input type="text" class="form-control" name="animalimg" th:field="*{imgPath}"><br>
+            <input type="submit" class="btn btn-dark" value="Dodaj!">
+         </form>
+
+    </body>
+</html>
